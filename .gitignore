@@ -1,0 +1,10 @@
+#Formats to ignore
+*.com
+*.class
+*.dll
+*.exe
+.DS_Store
+/target/
+.classpath
+.project
+.settings/
