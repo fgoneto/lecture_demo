@@ -396,6 +396,7 @@
 				<configuration>
 					<includes>
 						<include>**/TestAllPackages.java</include>
+						<include>**/RegressionTest.java</include>
 					</includes>
 					<!--argLine>-Djava.security.manager -Djava.security.policy=${basedir}/src/test/resources/java.policy</argLine -->
 				</configuration>
