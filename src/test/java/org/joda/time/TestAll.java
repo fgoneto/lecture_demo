@@ -97,39 +97,39 @@ public class TestAll extends TestCase {
         suite.addTest(TestTimeOfDay_Constructors.suite());
         suite.addTest(TestTimeOfDay_Properties.suite());
         
-        suite.addTest(TestYearMonthDay_Basics.suite());
-        suite.addTest(TestYearMonthDay_Constructors.suite());
-        suite.addTest(TestYearMonthDay_Properties.suite());
-        
-        suite.addTest(TestYearMonth_Basics.suite());
-        suite.addTest(TestYearMonth_Constructors.suite());
-        suite.addTest(TestYearMonth_Properties.suite());
-        
-        suite.addTest(TestMonthDay_Basics.suite());
-        suite.addTest(TestMonthDay_Constructors.suite());
-        suite.addTest(TestMonthDay_Properties.suite());
-        
-        suite.addTest(TestPartial_Basics.suite());
-        suite.addTest(TestPartial_Constructors.suite());
-        suite.addTest(TestPartial_Properties.suite());
-        suite.addTest(TestPartial_Match.suite());
-        
-        suite.addTest(TestAbstractPartial.suite());
-        suite.addTest(TestBasePartial.suite());
-        
-        suite.addTest(TestDateTimeComparator.suite());
-        suite.addTest(TestDateTimeConstants.suite());
-        suite.addTest(TestDateTimeUtils.suite());
-        suite.addTest(TestDateTimeZone.suite());
-        suite.addTest(TestDateTimeZoneCutover.suite());
-        suite.addTest(TestPeriodType.suite());
-//        suite.addTest(TestParseISO.suite());
-        suite.addTest(TestDurationField.suite());
-        
-        suite.addTest(TestStringConvert.suite());
-        suite.addTest(TestSerialization.suite());
-        suite.addTest(TestIllegalFieldValueException.suite());
-        suite.addTest(TestMinMaxLong.suite());
+//        suite.addTest(TestYearMonthDay_Basics.suite());
+//        suite.addTest(TestYearMonthDay_Constructors.suite());
+//        suite.addTest(TestYearMonthDay_Properties.suite());
+//        
+//        suite.addTest(TestYearMonth_Basics.suite());
+//        suite.addTest(TestYearMonth_Constructors.suite());
+//        suite.addTest(TestYearMonth_Properties.suite());
+//        
+//        suite.addTest(TestMonthDay_Basics.suite());
+//        suite.addTest(TestMonthDay_Constructors.suite());
+//        suite.addTest(TestMonthDay_Properties.suite());
+//        
+//        suite.addTest(TestPartial_Basics.suite());
+//        suite.addTest(TestPartial_Constructors.suite());
+//        suite.addTest(TestPartial_Properties.suite());
+//        suite.addTest(TestPartial_Match.suite());
+//        
+//        suite.addTest(TestAbstractPartial.suite());
+//        suite.addTest(TestBasePartial.suite());
+//        
+//        suite.addTest(TestDateTimeComparator.suite());
+//        suite.addTest(TestDateTimeConstants.suite());
+//        suite.addTest(TestDateTimeUtils.suite());
+//        suite.addTest(TestDateTimeZone.suite());
+//        suite.addTest(TestDateTimeZoneCutover.suite());
+//        suite.addTest(TestPeriodType.suite());
+////        suite.addTest(TestParseISO.suite());
+//        suite.addTest(TestDurationField.suite());
+//        
+//        suite.addTest(TestStringConvert.suite());
+//        suite.addTest(TestSerialization.suite());
+//        suite.addTest(TestIllegalFieldValueException.suite());
+//        suite.addTest(TestMinMaxLong.suite());
         return suite;
     }
 
