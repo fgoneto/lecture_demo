@@ -15,9 +15,18 @@
  */
 package org.joda.time;
 
+import java.util.Enumeration;
+
+import org.junit.AfterClass;
+import org.junit.Rule;
+import org.junit.rules.TestWatcher;
+import org.junit.runner.Description;
+
 import junit.framework.Test;
 import junit.framework.TestCase;
+import junit.framework.TestResult;
 import junit.framework.TestSuite;
+import junit.textui.TestRunner;
 
 /**
  * Entry point for all tests in this package.
@@ -133,11 +142,43 @@ public class TestAll extends TestCase {
         return suite;
     }
 
+    private static StringBuilder report = new StringBuilder();
+    
+    @Rule
+    public TestWatcher watcher = new TestWatcher() {
+        @Override
+        protected void failed(Throwable e, Description description) {
+            report.append("  FAILURE: ").append(
+                description.getMethodName()).append("\n");
+        }
+     
+        @Override
+        protected void succeeded(Description description) {
+            report.append("  Success: ").append(
+                description.getMethodName()).append("\n");
+        }
+    };
+     
+    @AfterClass
+    public static void tearDownClass() {
+        System.out.println("@AfterClass report");
+        System.out.println(report.toString ());
+    }
+    
     public static void main(String args[]) {
         String[] testCaseName = {
             TestAll.class.getName()
         };
         junit.textui.TestRunner.main(testCaseName);
+        TestSuite allTests = (TestSuite)TestAll.suite();
+        
+        Enumeration<Test> e = allTests.tests();
+        while(e.hasMoreElements()) {
+        		Test singleTest = e.nextElement();
+        		System.out.println("--> "+singleTest);
+        		
+        }
+		
     }
 
 }
