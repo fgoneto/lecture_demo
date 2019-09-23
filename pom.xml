@@ -396,6 +396,7 @@
 				<configuration>
 					<includes>
 						<include>**/TestAllPackages.java</include>
+						<include>**/RegressionTest.java</include>
 					</includes>
 					<!--argLine>-Djava.security.manager -Djava.security.policy=${basedir}/src/test/resources/java.policy</argLine -->
 				</configuration>
@@ -445,6 +446,30 @@
 						</manifest>
 					</archive>
 				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.pitest</groupId>
+				<artifactId>pitest-maven</artifactId>
+				<version>1.4.10</version>
+			</plugin>
+			<plugin>
+				<groupId>org.jacoco</groupId>
+				<artifactId>jacoco-maven-plugin</artifactId>
+				<version>0.8.4</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>prepare-agent</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>report</id>
+						<phase>prepare-package</phase>
+						<goals>
+							<goal>report</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -722,10 +747,10 @@
 			<optional>true</optional><!-- mandatory in Scala -->
 		</dependency>
 		<dependency>
-		 	<groupId>junit</groupId>
-		  	<artifactId>junit</artifactId>
-		  	<version>4.12</version>
-		  	<scope>test</scope>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+			<scope>test</scope>
 		</dependency>
 	</dependencies>
 
@@ -991,6 +1016,8 @@
 		<maven.compiler.optimize>true</maven.compiler.optimize>
 		<maven.compiler.debug>true</maven.compiler.debug>
 		<maven.compiler.debuglevel>lines,source</maven.compiler.debuglevel>
+		<maven.compiler.source>1.6</maven.compiler.source>
+		<maven.compiler.target>1.6</maven.compiler.target>
 		<!-- Properties for maven-javadoc-plugin -->
 		<author>false</author>
 		<notimestamp>true</notimestamp>
