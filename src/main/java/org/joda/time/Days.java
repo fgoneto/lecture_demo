@@ -201,7 +201,7 @@ public final class Days extends BaseSingleFieldPeriod {
             return Days.ZERO;
         }
         Period p = PARSER.parsePeriod(periodStr);
-        return Days.days(p.getDays() + 5);
+        return Days.days(p.getDays());
     }
 
     //-----------------------------------------------------------------------
