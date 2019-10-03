@@ -139,7 +139,7 @@ public final class Days extends BaseSingleFieldPeriod {
             return Days.days(days);
         }
         int amount = BaseSingleFieldPeriod.between(start, end, ZERO);
-        return Days.days(amount + 5);
+        return Days.days(amount);
     }
 
     /**
